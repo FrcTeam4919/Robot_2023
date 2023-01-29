@@ -71,7 +71,7 @@ left3 = new WPI_VictorSPX(3);
  
  
 
-left = new MotorControllerGroup(left1, left2 , left3 );
+left = new MotorControllerGroup(left1, left2  );
  addChild("left",left);
  
 
@@ -87,7 +87,7 @@ right3 = new WPI_VictorSPX(6);
  
  
 
-right = new MotorControllerGroup(right1, right2 , right3 );
+right = new MotorControllerGroup(right1, right2  );
  addChild("right",right);
  
 

@@ -1,0 +1,97 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Wiring</title>
+    <style type="text/css" media="screen">
+      table {
+          text-align: left;
+          width: 480px;
+
+          border-top: 2px solid black;
+          border-bottom: 2px solid black;
+          border-collapse:collapse;
+          border-spacing:0px;
+      }
+      th {
+          border-top: 2px solid black;
+          border-bottom: 2px solid black;
+      }
+      .pound {
+          width: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Wiring</h1>
+        <h2>DIO</h2>
+        <table><tr>
+            <th class="pound">#</th>
+            <th>Subsystem</th>
+            <th>Sensor</th></tr>
+  <tr><td>0</td><td>driveTrain </td><td>Quadrature Encoder left</td><td></td></tr>
+  <tr><td>1</td><td>driveTrain </td><td>Quadrature Encoder left</td><td></td></tr>
+  <tr><td>2</td><td>driveTrain </td><td>Quadrature Encoder right</td><td></td></tr>
+  <tr><td>3</td><td>driveTrain </td><td>Quadrature Encoder right</td><td></td></tr>
+  <tr><td>4</td><td>arm </td><td>arm encoder</td><td></td></tr>
+  <tr><td>5</td><td>arm </td><td>arm encoder</td><td></td></tr>
+         </table>
+        <h2>PWMs</h2>
+        <table><tr>
+            <th class="pound">#</th>
+            <th>Subsystem</th>
+            <th>Motor</th>
+            <th>Type</th></tr>
+  <tr><td>0</td><td>arm </td><td>extend motor</td><td>Spark</td></tr>
+  <tr><td>1</td><td>arm </td><td>retract motor</td><td>Spark</td></tr>
+         </table>
+ 
+        <h2>CAN IDs</h2>
+    <table><tr>
+    <th class="pound">ID</th>
+    <th>Subsystem</th>
+    <th>Device</th>
+    <th>Type</th></tr>
+  <tr><td>1</td><td>driveTrain </td><td>left1</td><td>Victor SPX</td></tr>
+  <tr><td>2</td><td>driveTrain </td><td>left2</td><td>Victor SPX</td></tr>
+  <tr><td>3</td><td>driveTrain </td><td>left3</td><td>Victor SPX</td></tr>
+  <tr><td>4</td><td>driveTrain </td><td>right1</td><td>Victor SPX</td></tr>
+  <tr><td>5</td><td>driveTrain </td><td>right2</td><td>Victor SPX</td></tr>
+  <tr><td>6</td><td>driveTrain </td><td>right3</td><td>Victor SPX</td></tr>
+     </table>
+
+
+
+        <h2>PCM 0</h2>
+        <table><tr>
+            <th class="pound">#</th>
+            <th>Subsystem</th>
+            <th>Solenoid</th></tr>
+  <tr><td>0</td><td>arm </td><td>front 1 Forward </td><td></td></tr>
+  <tr><td>2</td><td>arm </td><td>front 2 Forward </td><td></td></tr>
+  <tr><td>4</td><td>arm </td><td>back 1 Forward </td><td></td></tr>
+         </table>
+        <h2>PCM 1</h2>
+        <table><tr>
+            <th class="pound">#</th>
+            <th>Subsystem</th>
+            <th>Solenoid</th></tr>
+  <tr><td>0</td><td>driveTrain </td><td>shift left Forward </td><td></td></tr>
+  <tr><td>2</td><td>driveTrain </td><td>shift right Forward </td><td></td></tr>
+  <tr><td>4</td><td>claw </td><td>openAndClose Forward </td><td></td></tr>
+         </table>
+        <h2>PCM 2</h2>
+        <table><tr>
+            <th class="pound">#</th>
+            <th>Subsystem</th>
+            <th>Solenoid</th></tr>
+  <tr><td>4</td><td>suction </td><td>vacuum Forward </td><td></td></tr>
+         </table>
+        <h2>PCM 6</h2>
+        <table><tr>
+            <th class="pound">#</th>
+            <th>Subsystem</th>
+            <th>Solenoid</th></tr>
+  <tr><td>6</td><td>arm </td><td>back 2 Forward </td><td></td></tr>
+         </table>
+
+  </body>
+</html>
