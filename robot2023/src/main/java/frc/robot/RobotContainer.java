@@ -64,10 +64,10 @@ private final Joystick joystick1 = new Joystick(0);
 
     // SmartDashboard Buttons
     SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
-    SmartDashboard.putData("tilt up", new tiltup());
-    SmartDashboard.putData("tilt down", new tiltdown());
-    SmartDashboard.putData("out", new out());
-    SmartDashboard.putData("in", new in());
+    SmartDashboard.putData("tilt up", new tiltup( m_arm ));
+    SmartDashboard.putData("tilt down", new tiltdown( m_arm ));
+    SmartDashboard.putData("out", new out( m_arm ));
+    SmartDashboard.putData("in", new in( m_arm ));
     SmartDashboard.putData("open", new open());
     SmartDashboard.putData("close", new close());
     SmartDashboard.putData("yesVacuum", new yesVacuum());
