@@ -42,8 +42,8 @@ private WPI_VictorSPX left1;
 private WPI_VictorSPX left2;
 private WPI_VictorSPX left3;
 private MotorControllerGroup left;
-private WPI_VictorSPX right1;
 private WPI_VictorSPX right2;
+private WPI_VictorSPX right1;
 private WPI_VictorSPX right3;
 private MotorControllerGroup right;
 private DifferentialDrive differentialDrive1;
@@ -75,11 +75,11 @@ left = new MotorControllerGroup(left1, left2  );
  addChild("left",left);
  
 
-right1 = new WPI_VictorSPX(4);
+right2 = new WPI_VictorSPX(5);
  
  
 
-right2 = new WPI_VictorSPX(5);
+right1 = new WPI_VictorSPX(4);
  
  
 
@@ -98,11 +98,11 @@ differentialDrive1.setExpiration(0.1);
 differentialDrive1.setMaxOutput(1.0);
 
 
-shiftleft = new DoubleSolenoid(1, PneumaticsModuleType.CTREPCM, 0, 1);
+shiftleft = new DoubleSolenoid(1, PneumaticsModuleType.REVPH, 0, 1);
  addChild("shift left", shiftleft);
  
 
-shiftright = new DoubleSolenoid(1, PneumaticsModuleType.CTREPCM, 2, 3);
+shiftright = new DoubleSolenoid(1, PneumaticsModuleType.REVPH, 2, 3);
  addChild("shift right", shiftright);
  
 
