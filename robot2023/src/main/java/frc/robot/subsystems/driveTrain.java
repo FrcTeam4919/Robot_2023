@@ -155,4 +155,4 @@ leftShift = new Solenoid(0, PneumaticsModuleType.CTREPCM, 3);
     // here. Call these from Commands.
 
 }
-
+  
