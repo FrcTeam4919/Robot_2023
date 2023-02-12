@@ -96,17 +96,26 @@ armMotor.burnFlash();
     }
 
     // tilt arm action tilt claw up down
-    public void tiltUp() {
+    public void tiltUpFront() {
         front1.set(Value.kForward);
         front2.set(Value.kForward);
-        back1.set(Value.kForward);
-        back2.set(Value.kForward);}
+    }
 
-    public void tiltDown() {
+    public void tiltDownFront() {
         front1.set(Value.kReverse);
         front2.set(Value.kReverse);
+       
+    }
+
+    public void tiltUpBack() {
+        back1.set(Value.kForward);
+        back2.set(Value.kForward);
+    }
+
+    public void tiltDownBack() {
         back1.set(Value.kReverse);
         back2.set(Value.kReverse);
+       
     }
 
     @Override
