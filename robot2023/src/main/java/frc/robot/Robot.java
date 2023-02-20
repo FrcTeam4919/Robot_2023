@@ -18,7 +18,7 @@ import edu.wpi.first.hal.HAL;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
-
+import edu.wpi.first.cameraserver.CameraServer;
 /**
  * The VM is configured to automatically run this class, and to call the
  * functions corresponding to each mode, as described in the TimedRobot
@@ -42,6 +42,11 @@ public class Robot extends TimedRobot {
         // autonomous chooser on the dashboard.
         m_robotContainer = RobotContainer.getInstance();
         HAL.report(tResourceType.kResourceType_Framework, tInstances.kFramework_RobotBuilder);
+
+       /** Uses the CameraServer class to automatically capture video from a USB webcam and send it to the
+        * FRC dashboard without doing any vision processing. 
+         */
+       CameraServer.startAutomaticCapture();
     }
 
     /**
@@ -59,8 +64,7 @@ public class Robot extends TimedRobot {
         // block in order for anything in the Command-based framework to work.
         CommandScheduler.getInstance().run();
     }
-
-
+    
     /**
     * This function is called once each time the robot enters Disabled mode.
     */
