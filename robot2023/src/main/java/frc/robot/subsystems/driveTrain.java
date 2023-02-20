@@ -91,7 +91,7 @@ quadratureEncoderleft = new Encoder(0, 1, false, EncodingType.k4X);
  addChild("Quadrature Encoder left",quadratureEncoderleft);
  quadratureEncoderleft.setDistancePerPulse(1.0);
 
-quadratureEncoderright = new Encoder(2, 3, false, EncodingType.k4X);
+quadratureEncoderright = new Encoder(2, 3, true, EncodingType.k4X);
  addChild("Quadrature Encoder right",quadratureEncoderright);
  quadratureEncoderright.setDistancePerPulse(1.0);
 
@@ -139,6 +139,15 @@ leftShift = new Solenoid(1, PneumaticsModuleType.REVPH, 13);
 
     public double gyroOutput() {
         return Gyro.getAngle();
+    }
+
+    public void encoderReset() {
+        quadratureEncoderleft.reset();
+        quadratureEncoderright.reset();
+    }
+
+    public double getAvgEncDistance() {
+        return (quadratureEncoderleft.getDistance() + quadratureEncoderright.getDistance()) / 2.0;
     }
 
     @Override

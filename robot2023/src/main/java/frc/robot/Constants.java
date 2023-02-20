@@ -28,5 +28,23 @@ public class Constants {
     *   public static final int kRightMotor2Port = 3; 
     * }
     */ 
+
+  public static final class DriveConstants {
+    public static final int kEncoderCPR = 1024;
+    public static final double kWheelDiameterInches = 6;
+    public static final double kEncoderDistancePerPulse =
+        // Assumes the encoders are directly mounted on the wheel shafts
+        (kWheelDiameterInches * Math.PI) / (double) kEncoderCPR;
+  }
+
+  
+
+  public static final class AutoConstants {
+    public static final double kAutoDriveDistanceInches = 60; //need to adapt
+    public static final double kAutoBackupDistanceInches = 20; //need to adapt
+    public static final double kAutoDriveSpeed = 0.5;
+  }
+
+
 }
 
