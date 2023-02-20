@@ -117,9 +117,7 @@ public class Robot extends TimedRobot {
      * This function is called periodically during operator control.
      */
     @Override
-    public void teleopPeriodic() {
-        SmartDashboard.putNumber("Gyro Angle", drive.gyroOutput());
-    }
+    public void teleopPeriodic() {}
 
     @Override
     public void testInit() {
