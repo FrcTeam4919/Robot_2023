@@ -50,6 +50,7 @@ public class open extends CommandBase {
     // Called when the command is initially scheduled.
     @Override
     public void initialize() {
+        m_claw.open();
     }
 
     // Called every time the scheduler runs while the command is scheduled.

@@ -20,13 +20,30 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public class Constants {
-   /**
-    * public static final class DriveConstants {
-    *   public static final int kLeftMotor1Port = 0;
-    *   public static final int kLeftMotor2Port = 1;
-    *   public static final int kRightMotor1Port = 2;
-    *   public static final int kRightMotor2Port = 3; 
-    * }
-    */ 
+  
+
+  public static final class DriveConstants {
+    public static final int kEncoderCPR = 1024;
+    public static final double kWheelDiameterInches = 6;
+    public static final double kEncoderDistancePerPulse =
+        // Assumes the encoders are directly mounted on the wheel shafts
+        (kWheelDiameterInches * Math.PI) / (double) kEncoderCPR;
+  }
+
+  
+
+  public static final class AutoConstants {
+    public static final double kAutoDriveDistanceInches = 60; //need to adapt
+    public static final double kAutoBackupDistanceInches = 20; //need to adapt
+    public static final double kAutoDriveSpeed = 0.5;
+  }
+
+  public static final class ArmConstants {
+    public static final int kArmEncoderCPR = 1024;
+    public static final double kGearDiameterInches = 3; //diamet of the gear or otherwise component that results in arm movement
+    public static final double kArmEncoderDistanceperPulse = (kGearDiameterInches * Math.PI) / (double) kArmEncoderCPR;
+  }
+
+
 }
 
