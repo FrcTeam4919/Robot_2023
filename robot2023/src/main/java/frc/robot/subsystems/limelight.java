@@ -9,16 +9,24 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 
 public class limelight extends SubsystemBase {
+
+    private driveTrain m_driveTrain;
+
     public limelight() {
     }
     
+
     //aimcone called from autonomous command or aimcone command
     //aimcone in teleop called in Robot teleopperiodic while the key is pressed
     public void aimCone() {
+        
         NetworkTable table = NetworkTableInstance.getDefault().getTable("limelight");
         NetworkTableEntry tx = table.getEntry("tx");
         NetworkTableEntry ty = table.getEntry("ty");
         NetworkTableEntry ta = table.getEntry("ta");
+
+        double left_command = 0;
+        double right_command = 0;
 
         float Kp = -0.1f;
         float min_command = 0.05f;
@@ -33,10 +41,13 @@ public class limelight extends SubsystemBase {
         {
                 steering_adjust = Kp * ((float)heading_error) + min_command;
         }
+
         //Left and right are for tank drive, need to convert it to arcade or create tankdrive
         // in the driveTrain subsystem (in addition to arcadedrive?)
-        //left_command += steering_adjust;
-        //right_command -= steering_adjust;
+        left_command += steering_adjust;
+        right_command -= steering_adjust;
+
+        m_driveTrain.limelightDrive(left_command, right_command);
     }
 
     @Override

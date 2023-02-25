@@ -108,6 +108,10 @@ leftShift = new Solenoid(1, PneumaticsModuleType.REVPH, 13);
         differentialDrive1.arcadeDrive(fwd , rot);
     }
 
+    public void limelightDrive(double left, double right) {
+        differentialDrive1.tankDrive(left, right);
+    }
+
     public void forward () {
         differentialDrive1.arcadeDrive(.5, 0); 
     }
