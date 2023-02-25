@@ -158,7 +158,7 @@ public class driveTrain extends SubsystemBase {
     }
 
 
-    static final double kOffBalanceAngleThresholdDegrees = 10;
+/*    static final double kOffBalanceAngleThresholdDegrees = 10;
     static final double kOonBalanceAngleThresholdDegrees  = 5;
     
     public void levelRobot() {
@@ -206,7 +206,7 @@ public class driveTrain extends SubsystemBase {
             Timer.delay(0.005);		// wait for a motor update time
         }
     }
-
+*/
     @Override
     public void periodic() {
         // This method will be called once per scheduler run
