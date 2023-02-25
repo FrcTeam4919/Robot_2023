@@ -114,9 +114,11 @@ armMotor = new CANSparkMax(7, MotorType.kBrushed);
         armEncoder.reset();
     }
 
-    public double encoderSpin() {
+    public double getArmDistance() {
         return armEncoder.getDistance();
     }
+
+    //
 
     @Override
     public void periodic() {
