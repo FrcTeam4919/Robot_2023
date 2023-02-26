@@ -50,7 +50,7 @@ public class tiltupfront extends CommandBase {
     // Called when the command is initially scheduled.
     @Override
     public void initialize() {
-    m_arm.tiltUpFront();
+    //m_arm.tiltUpFront();
     }
 
     // Called every time the scheduler runs while the command is scheduled.
