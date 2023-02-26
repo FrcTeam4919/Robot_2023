@@ -24,11 +24,11 @@ import frc.robot.commands.tiltdownfront;
 import frc.robot.commands.tiltupback;
 import frc.robot.commands.tiltupfront;
 import frc.robot.commands.close;
-import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;;
+import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 import frc.robot.Constants.AutoConstants;
-import frc.robot.subsystem.claw;
-import frc.robot.subsystem.driveTrain;
-import frc.robot.subsystem.arm;
+import frc.robot.subsystems.claw;
+import frc.robot.subsystems.driveTrain;
+import frc.robot.subsystems.arm;
 /**
  *
  */
@@ -41,7 +41,11 @@ public class AutonomousCommand extends SequentialCommandGroup {
  */
 
     public AutonomousCommand(driveTrain drive, arm reacher, claw pincer ) {
-        addCommands()
+        addCommands(
+            new ArmExtendDistance(AutoConstants.kAutoArmExtendDistance, reacher),
+            new open (pincer),
+            new DriveDistance(AutoConstants.kAutoBackupDistanceInches, AutoConstants.kAutoDriveSpeed, drive)
+        );
 
 
     
