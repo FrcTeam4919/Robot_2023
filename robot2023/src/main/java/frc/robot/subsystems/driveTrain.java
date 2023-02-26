@@ -153,5 +153,3 @@ leftShift = new Solenoid(1, PneumaticsModuleType.REVPH, 13);
     
     // here. Call these from Commands.
 }
-
-  
