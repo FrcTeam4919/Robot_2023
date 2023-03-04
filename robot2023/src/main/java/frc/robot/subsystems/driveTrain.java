@@ -163,6 +163,14 @@ leftShift = new Solenoid(1, PneumaticsModuleType.REVPH, 13);
         return (quadratureEncoderleft.getDistance() + quadratureEncoderright.getDistance()) / 2.0;
     }
 
+   // static final double kOffBalanceAngleThresholdDegrees = 10;
+  //  static final double kOonBalanceAngleThresholdDegrees  = 5;
+  //  public void balance(){
+    
+       
+              
+     // if ( gyroOutPut >= (koffBalanceAngleThreshold )  ) {
+   //  } 
     @Override
     public void periodic() {
         // This method will be called once per scheduler run
