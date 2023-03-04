@@ -33,14 +33,18 @@ public class Constants {
   
 
   public static final class AutoConstants {
-    public static final double kAutoDriveDistanceInches = 60; //need to adapt
-    public static final double kAutoBackupDistanceInches = 20; //need to adapt
+    public static final double kAutoDriveDistanceInches = 60; //need to change
+    public static final double kAutoBackupDistanceInches = 20; //need to change
+    public static final double kAutoTurnAngle = 90;
     public static final double kAutoDriveSpeed = 0.5;
+
+    public static final double kAutoArmExtendDistance = 20; //may need to change
+    public static final double kAutoArmRetractDistance = 20; //may need to change
   }
 
   public static final class ArmConstants {
     public static final int kArmEncoderCPR = 1024;
-    public static final double kGearDiameterInches = 3; //diamet of the gear or otherwise component that results in arm movement
+    public static final double kGearDiameterInches = 3; //diameter of the gear or otherwise component that results in arm movement
     public static final double kArmEncoderDistanceperPulse = (kGearDiameterInches * Math.PI) / (double) kArmEncoderCPR;
   }
 
