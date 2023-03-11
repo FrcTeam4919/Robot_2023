@@ -103,9 +103,9 @@ leftShift = new Solenoid(1, PneumaticsModuleType.REVPH, 13);
  addChild("leftShift", leftShift);
 */ 
 /** Shifter double solenoid replacement code*/
-  rightShift = new DoubleSolenoid(1, PneumaticsModuleType.REVPH, 3, 2);
+  rightShift = new DoubleSolenoid(1, PneumaticsModuleType.CTREPCM, 3, 2);
   
-  leftShift = new DoubleSolenoid(1, PneumaticsModuleType.REVPH, 1, 0);
+  leftShift = new DoubleSolenoid(1, PneumaticsModuleType.CTREPCM, 1, 0);
  
 
  //Gyro = new AnalogGyro(0);
