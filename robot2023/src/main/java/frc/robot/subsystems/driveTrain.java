@@ -190,10 +190,10 @@ leftShift = new Solenoid(1, PneumaticsModuleType.REVPH, 13);
 
    
     public void dock() {
-        if ( imu.getAngle() >= 15) {
+        if ( imu.getAccelY() >= .5) {
             differentialDrive1.arcadeDrive(.5, 0);
         }
-        if (imu.getAngle() <= -15){
+        if (imu.getAccelY() <= -.5){
             differentialDrive1.arcadeDrive(-.5, 0);
         }
     }
