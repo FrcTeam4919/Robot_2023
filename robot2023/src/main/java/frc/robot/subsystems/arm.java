@@ -74,12 +74,12 @@ armMotor = new CANSparkMax(7, MotorType.kBrushed);
 
     // etend extends arm out, temporery
     public void extend() {
-       armMotor.set(1);
+       armMotor.set(0.5);
     }
 
     // retract retracts arm back in, temporery speed
     public void retract() {
-        armMotor.set(-1);
+        armMotor.set(-0.5);
 
     }
 
