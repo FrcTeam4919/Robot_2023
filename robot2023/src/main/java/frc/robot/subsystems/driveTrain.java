@@ -196,6 +196,9 @@ leftShift = new Solenoid(1, PneumaticsModuleType.REVPH, 13);
         if (imu.getAccelY() <= -.5){
             differentialDrive1.arcadeDrive(-.5, 0);
         }
+       else{
+        differentialDrive1.arcadeDrive(0, 0);
+       }
     }
 
 }
