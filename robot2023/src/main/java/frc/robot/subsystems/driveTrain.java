@@ -103,9 +103,9 @@ leftShift = new Solenoid(1, PneumaticsModuleType.REVPH, 13);
  addChild("leftShift", leftShift);
 */ 
 /** Shifter double solenoid replacement code*/
-  rightShift = new DoubleSolenoid(1, PneumaticsModuleType.REVPH, 3, 2);
+  rightShift = new DoubleSolenoid(2, PneumaticsModuleType.CTREPCM, 6, 7);
   
-  leftShift = new DoubleSolenoid(1, PneumaticsModuleType.REVPH, 1, 0);
+  leftShift = new DoubleSolenoid(2, PneumaticsModuleType.CTREPCM, 4, 5);
  
 
  //Gyro = new AnalogGyro(0);
@@ -167,6 +167,14 @@ leftShift = new Solenoid(1, PneumaticsModuleType.REVPH, 13);
         return (quadratureEncoderleft.getDistance() + quadratureEncoderright.getDistance()) / 2.0;
     }
 
+   // static final double kOffBalanceAngleThresholdDegrees = 10;
+  //  static final double kOonBalanceAngleThresholdDegrees  = 5;
+  //  public void balance(){
+    
+       
+              
+     // if ( gyroOutPut >= (koffBalanceAngleThreshold )  ) {
+   //  } 
     @Override
     public void periodic() {
         // This method will be called once per scheduler run
@@ -183,5 +191,18 @@ leftShift = new Solenoid(1, PneumaticsModuleType.REVPH, 13);
     
     // here. Call these from Commands.
 
+
+   
+    public void dock() {
+        if ( imu.getAccelY() >= .5) {
+            differentialDrive1.arcadeDrive(.5, 0);
+        }
+        if (imu.getAccelY() <= -.5){
+            differentialDrive1.arcadeDrive(-.5, 0);
+        }
+       else{
+        differentialDrive1.arcadeDrive(0, 0);
+       }
+    }
 
 }
